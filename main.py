@@ -55,15 +55,12 @@ for _ in HOMES_URL:
         rents = rent.text
         rent_list.append(rents)
 
-    #google doc selenium start
-
     #google doc selenium_start
     driver = webdriver.Chrome(executable_path=CHROME_DRIVER_PATH)
     driver.get(GOOGLE_FORM_LINK)
     driver.maximize_window()
     address_question = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div/div[1]/input')
     address_question.send_keys()
-
 
 
     for _ in range(len(address_list)):
